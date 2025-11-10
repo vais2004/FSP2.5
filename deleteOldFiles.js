@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 const directoryPath = path.resolve(process.env.DIRECTORY_PATH);
-const thresholdDays = path.resolve(process.env.THRESHOLD_DAYS);
+const thresholdDays = parseInt(process.env.THRESHOLD_DAYS);
 const thresholdDate = new Date(
   Date.now() - thresholdDays * 24 * 60 * 60 * 1000
 );
